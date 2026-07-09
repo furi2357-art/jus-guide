@@ -3,44 +3,243 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>수강생 안내 | 장의순 수능국어</title>
+<title>올인원 수강생 필독 공지 | 장의순 수능국어</title>
 <meta name="robots" content="noindex">
+<meta name="description" content="상담 신청, 전용 자료, 교재 주문, 강좌 추가까지 한 곳에서.">
+<meta property="og:title" content="올인원 수강생 필독 공지">
+<meta property="og:description" content="상담 신청, 전용 자료, 교재 주문, 강좌 추가까지 한 곳에서.">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  img { max-width: 100%; }
+  html { -webkit-text-size-adjust: 100%; }
+  ul { list-style: none; }
+
   :root {
-    --ground: #ffffff; --ink: #171310; --muted: #6f645b;
-    --line: #e6e0d9; --accent: #ea5b0c;
+    --ground: #ffffff;
+    --raise: #faf8f6;
+    --ink: #171310;
+    --muted: #6f645b;
+    --line: #e6e0d9;
+    --line-strong: #d6cec5;
+    --accent: #ea5b0c;
+    --accent-soft: #fdf0e6;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --ground: #141110; --ink: #f2ede8; --muted: #a39890; --line: #322c28; --accent: #ff7a2f; }
+    :root {
+      --ground: #141110;
+      --raise: #1d1917;
+      --ink: #f2ede8;
+      --muted: #a39890;
+      --line: #322c28;
+      --line-strong: #443c36;
+      --accent: #ff7a2f;
+      --accent-soft: #2a1c12;
+    }
   }
+
   body {
-    background: var(--ground); color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", "Noto Sans KR", sans-serif;
-    line-height: 1.7; -webkit-font-smoothing: antialiased;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+      "Pretendard", "Malgun Gothic", "Noto Sans KR", sans-serif;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 34rem; margin: 0 auto; padding: 5rem 1.25rem; display: flex; flex-direction: column; gap: 2.25rem; }
-  .eyebrow { font-size: .74rem; font-weight: 700; letter-spacing: .16em; color: var(--accent); }
-  h1 { font-size: 2rem; font-weight: 800; letter-spacing: -.025em; margin-top: .8rem; }
-  ul { list-style: none; display: flex; flex-direction: column; }
-  li { border-top: 1px solid var(--line); }
-  li:last-child { border-bottom: 1px solid var(--line); }
-  a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem .25rem; color: inherit; text-decoration: none; font-weight: 600; }
-  a:hover { color: var(--accent); }
-  a::after { content: "→"; color: var(--muted); }
-  a:hover::after { color: var(--accent); }
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .wrap {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: clamp(2.75rem, 8vw, 5rem) 1.25rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  header { display: flex; flex-direction: column; gap: .75rem; }
+  .eyebrow {
+    font-size: .74rem; font-weight: 700; letter-spacing: .16em; color: var(--accent);
+  }
+  h1 {
+    font-size: clamp(1.85rem, 5.5vw, 2.5rem);
+    font-weight: 800; letter-spacing: -.03em; line-height: 1.24;
+    text-wrap: balance;
+  }
+  .lede { color: var(--muted); }
+
+  .block { display: flex; flex-direction: column; gap: 1rem; }
+  .block > h2 {
+    font-size: .78rem; font-weight: 700; letter-spacing: .14em;
+    color: var(--muted); text-transform: uppercase;
+    padding-bottom: .7rem; border-bottom: 1px solid var(--line);
+  }
+
+  .menu { display: flex; flex-direction: column; }
+  .menu li + li { border-top: 1px solid var(--line); }
+  .item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: .35rem 1rem;
+    padding: 1.15rem .15rem;
+    color: inherit; text-decoration: none;
+  }
+  .item .title { font-weight: 650; letter-spacing: -.01em; }
+  .item .desc { grid-column: 1; color: var(--muted); font-size: .92rem; line-height: 1.55; }
+  .item .go {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    font-size: .75rem; font-weight: 700; letter-spacing: .04em;
+    color: var(--muted);
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: .3rem .7rem;
+    white-space: nowrap;
+  }
+  .item:hover .title { color: var(--accent); }
+  .item:hover .go { color: var(--accent); border-color: var(--accent); }
+  .item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+  .card {
+    background: var(--raise);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.4rem 1.35rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .card h3 { font-size: 1.15rem; font-weight: 750; letter-spacing: -.02em; }
+  .card p { color: var(--muted); font-size: .95rem; }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: .4rem 1.1rem; font-size: .95rem; }
+  dt { color: var(--muted); }
+  dd { font-variant-numeric: tabular-nums; }
+  .btn {
+    align-self: flex-start;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .95rem;
+    padding: .7rem 1.3rem;
+    border-radius: 999px;
+  }
+  .btn:hover { filter: brightness(1.07); }
+  .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  .track { display: flex; flex-direction: column; gap: .8rem; }
+  .track-row { display: flex; gap: .9rem; align-items: baseline; }
+  .track-row .quote {
+    flex: none; width: 11rem;
+    color: var(--ink); font-weight: 600;
+  }
+  .track-row .arrow { color: var(--accent); font-weight: 700; }
+  .track-row .answer { color: var(--muted); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 1.4rem;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+
+  @media (max-width: 30rem) {
+    .track-row { flex-direction: column; gap: .15rem; }
+    .track-row .quote { width: auto; }
+    .track-row .arrow { display: none; }
+  }
 </style>
 </head>
 <body>
   <div class="wrap">
+
     <header>
-      <div class="eyebrow">장의순 수능국어</div>
-      <h1>수강생 안내</h1>
+      <div class="eyebrow">장의순 수능국어 · 올인원</div>
+      <h1>올인원 수강생 필독 공지</h1>
+      <p class="lede">상담 신청부터 교재 주문까지, 필요한 링크를 여기 모아 뒀습니다.</p>
     </header>
-    <ul>
-      <li><a href="./add-course/">프리패스에 강좌 추가하는 법</a></li>
-    </ul>
+
+    <section class="card">
+      <div>
+        <h3>6평 리뷰 1:1 상담</h3>
+        <p>장의순 선생님이 직접 진행합니다. 6월 모의평가 결과를 함께 보며 약점과 공부 방향을 잡아 드립니다.</p>
+      </div>
+      <dl>
+        <dt>일시</dt><dd>월~토 23:30 – 01:30</dd>
+        <dt>시간</dt><dd>1인당 15분</dd>
+      </dl>
+      <a class="btn" href="https://docs.google.com/spreadsheets/d/1Rv5taTVBZGKV3mvLDieI04fApogchhBUBjXWl4GNG7U/edit?usp=sharing" target="_blank" rel="noopener">상담 신청하기</a>
+    </section>
+
+    <section class="block">
+      <h2>수업 · 자료</h2>
+      <ul class="menu">
+        <li>
+          <a class="item" href="https://naver.me/xjYJj9du" target="_blank" rel="noopener">
+            <span class="title">올인원 수강생 전용 자료</span>
+            <span class="go">열기</span>
+            <span class="desc">주간지를 포함한 전용 자료를 받는 곳입니다.</span>
+          </a>
+        </li>
+        <li>
+          <a class="item" href="./add-course/">
+            <span class="title">프리패스에 강좌 추가하는 법</span>
+            <span class="go">보기</span>
+            <span class="desc">새 강좌는 직접 담아야 수강 중 목록에 나타납니다. 1분이면 끝납니다.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>교재</h2>
+      <ul class="menu">
+        <li>
+          <a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdZGG7KJLqNq7u9Z283XV1Jd8VkesAXW1IjnWoMHFxzt0jbwA/viewform" target="_blank" rel="noopener">
+            <span class="title">교재 주문하기</span>
+            <span class="go">신청</span>
+            <span class="desc">빠른 배송을 위해 온라인 주문 대신 이 폼으로 직접 접수받습니다.</span>
+          </a>
+        </li>
+        <li>
+          <a class="item" href="https://open.kakao.com/o/sycEBRCi" target="_blank" rel="noopener">
+            <span class="title">교재 문의</span>
+            <span class="go">채팅</span>
+            <span class="desc">주문이나 배송이 궁금하면 오픈채팅으로 물어보세요.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>클리닉 · 상담</h2>
+      <ul class="menu">
+        <li>
+          <a class="item" href="https://open.kakao.com/o/sfxsJpri" target="_blank" rel="noopener">
+            <span class="title">국어 클리닉 · 상담 신청</span>
+            <span class="go">채팅</span>
+            <span class="desc">오픈채팅에 개인 채팅을 남기고 시험지를 보내주시면 진행합니다.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>처음 오신 분</h2>
+      <div class="track">
+        <div class="track-row">
+          <span class="quote">“국어가 진짜 싫다”</span>
+          <span class="arrow">→</span>
+          <span class="answer">명문장 <b>문학</b>부터 들으세요.</span>
+        </div>
+        <div class="track-row">
+          <span class="quote">“국어 어느 정도 한다”</span>
+          <span class="arrow">→</span>
+          <span class="answer">명문장 <b>독서</b>부터 들으세요.</span>
+        </div>
+      </div>
+      <p class="lede">명문장 강의를 들으시면서 상담을 신청해 두고 기다리세영. 커리큘럼은 상담에서 자세히 알려드립니다 😊</p>
+    </section>
+
+    <footer>장의순 수능국어 · 올인원 패키지 수강생 안내</footer>
+
   </div>
 </body>
 </html>
